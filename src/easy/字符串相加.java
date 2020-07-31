@@ -4,10 +4,10 @@ package easy;
  * 字符串相加
  * https://leetcode-cn.com/problems/add-strings/
  */
-public class AddStrings {
+public class 字符串相加 {
 
     public static void main(String[] args) {
-        System.out.println(addStrings("18", "234"));
+        System.out.println(addStrings("18444", "2344343434343434343434"));
     }
 
     public static String addStrings(String number1, String number2) {
