@@ -10,6 +10,13 @@ public class ListNode {
         val = x;
     }
 
+    public ListNode(int... arry) {
+        if (arry != null) {
+            this.val = arry[0];
+            this.next = getNextListNode(arry, 1);
+        }
+    }
+
     @Override
     public String toString() {
         if (this.next == null) {

@@ -1,4 +1,4 @@
-package easy;
+package linkedlist;
 
 import model.ListNode;
 
@@ -9,14 +9,14 @@ public class 反转链表 {
     }
 
     public static ListNode reverseList(ListNode listNode) {
-        ListNode cur = listNode;
-        ListNode pre = null;
+        /*新链表的队头和队尾*/
         ListNode head = null;
-        while (cur != null) {
-            head = new ListNode(cur.val);
-            head.next = pre;
-            pre = head;
-            cur = cur.next;
+        while (listNode != null){
+            ListNode newHead = new ListNode(listNode.val);
+            /*新队头指向老队头*/
+            newHead.next = head;
+            head = newHead;
+            listNode = listNode.next;
         }
         return head;
     }
