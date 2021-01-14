@@ -5,7 +5,7 @@ import model.ListNode;
 public class 反转链表 {
 
     public static void main(String[] args) {
-        System.out.println(reverseList(ListNode.getListNode(new int[]{1, 2, 3, 4, 5, 6})));
+        System.out.println(reverseListII(ListNode.getListNode(new int[]{1, 2, 3, 4, 5, 6})));
     }
 
     public static ListNode reverseList(ListNode listNode) {
@@ -20,4 +20,19 @@ public class 反转链表 {
         }
         return head;
     }
+
+    public static ListNode reverseListII(ListNode listNode) {
+
+        ListNode newHead = null;
+        ListNode cur = listNode;
+        while (cur != null){
+            ListNode tmp = cur.next;
+            cur.next = newHead;
+            newHead = cur;
+            cur = tmp;
+        }
+
+        return newHead;
+    }
+
 }
