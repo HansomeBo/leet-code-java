@@ -17,6 +17,11 @@ public class ListNode {
         }
     }
 
+    public ListNode(int x, ListNode next) {
+        val = x;
+        this.next = next;
+    }
+
     @Override
     public String toString() {
         if (this.next == null) {
