@@ -2,6 +2,11 @@ package linkedlist;
 
 import model.ListNode;
 
+/**
+ * https://leetcode.cn/problems/3u1WK4/
+ *
+ * 将两个链表头尾相连
+ */
 public class 两个链表的第一个公共节点 {
 
     public static void main(String[] args) {
