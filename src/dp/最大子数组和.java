@@ -1,4 +1,4 @@
-package 动态规划;
+package dp;
 
 /**
  * https://leetcode.cn/problems/maximum-subarray/
@@ -22,6 +22,21 @@ public class 最大子数组和 {
         }
         for(int i = 1; i < dp.length; i++){
             max = Math.max(max,dp[i]);
+        }
+        return max;
+    }
+
+    /**
+     * dp备忘录优化为一个最大数值,记住前一个值，用来动态转移
+     * @param nums
+     * @return
+     */
+    public int maxSubArray2(int[] nums) {
+        int max = nums[0];
+        int pre = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            pre = Math.max(pre + nums[i],nums[i]);
+            max = Math.max(pre,max);
         }
         return max;
     }
