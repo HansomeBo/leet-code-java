@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * https://leetcode.cn/problems/find-mode-in-binary-search-tree/
  */
 public class 二叉搜索树中的众数 {
 
