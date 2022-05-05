@@ -2,45 +2,50 @@ package array.滑动窗口;
 
 /**
  * https://leetcode-cn.com/problems/minimum-window-substring/
- * 难点在于处理是否滑动窗口的子串是否包含目标子串的判断 */
+ * 难点在于处理是否滑动窗口的子串是否包含目标子串的判断
+ */
 public class 最小覆盖子串 {
 
-    private static int[] thash = new int[128];
-    private static int[] shash = new int[128];
+    static class Solution {
+        private int[] thash = new int[128];
+        private int[] shash = new int[128];
 
-    public static String minWindow(String s, String t) {
-        int left = 0;
-        int right = 1;
-        String res = "";
-        for (char c : t.toCharArray()) thash[c]++;
-        shash[s.charAt(left)]++;
-        while (left <= right && left < s.length() && right <= s.length()) {
-            String current= s.substring(left,right);
-            if (contains()) {
-                if ("".equals(res) || res.length() > current.length()) {
-                    res = current;
+        public String minWindow(String s, String t) {
+            int left = 0;
+            int right = 0;
+            String res = "";
+            /*初始化targer字符串、窗口内的字符串*/
+            for (char c : t.toCharArray()) thash[c]++;
+            for (char c : s.substring(left, right + 1).toCharArray()) shash[c]++;
+            /*右指针最多移动到最右边*/
+            while (right < s.length()) {
+                /*当包含时，左指针移动，直到不再包含，右指针再移动*/
+                while (isContains() && left <= right) {
+                    if ("".equals(res) || res.length() > right + 1 - left) {
+                        res = s.substring(left, right + 1);
+                    }
+                    shash[s.charAt(left)]--;
+                    left++;
                 }
-
-                shash[s.charAt(left)]--;
-                left++;
-            } else {
                 right++;
-                if(right <= s.length()) shash[s.charAt(right - 1)]++;
+                if (right < s.length()) shash[s.charAt(right)]++;
+
             }
-
+            return res;
         }
-        return res;
-    }
 
-    public static boolean contains() {
-        for (int i = 0; i < thash.length; i++) {
-            if (thash[i] > shash[i]) return false;
+        public Boolean isContains() {
+            for (int i = 0; i < thash.length; i++) {
+                if (thash[i] > shash[i]) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return true;
     }
-
     public static void main(String[] args) {
-        System.out.println(minWindow("ADOBECODEBANC",
+        Solution solution = new Solution();
+        System.out.println(solution.minWindow("ADOBECODEBANC",
                 "ABC"));
     }
 }
