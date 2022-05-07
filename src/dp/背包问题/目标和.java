@@ -30,7 +30,7 @@ public class 目标和 {
                     /**不需要num凑出j */
                     dp[i][j] = dp[i - 1][j];
                 }else{
-                    /**需要num凑出j */
+                    /**不需要 or 需要 num，两种情况的结果集加出来 */
                     dp[i][j] = dp[i - 1][j] + dp[i - 1][j - num];
                 }
             }
