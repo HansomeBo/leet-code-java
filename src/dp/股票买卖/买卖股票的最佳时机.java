@@ -13,9 +13,9 @@ public class 买卖股票的最佳时机 {
         dp[0][0] = 0;
         dp[0][1] = - prices[0];
         for(int i = 1; i < prices.length; i++){
-            /**没有股票：之前就没有，之前有但是卖掉了 */
+            /**没有股票：之前就没有这次不买，之前有这次卖掉了 */
             dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
-            /**持有股票：之前有，之前没有但是现在买了 */
+            /**持有股票：之前有这次不卖，之前没有这次买 */
             dp[i][1] = Math.max(dp[i - 1][1], - prices[i]);
         }
         return dp[prices.length - 1][0];
@@ -31,9 +31,9 @@ public class 买卖股票的最佳时机 {
         int notHold = 0;
         int hold = -prices[0];
         for(int i = 1; i < prices.length; i++){
-            /**没有股票：之前就没有，之前有但是卖掉了 */
+            /**没有股票：之前就没有这次不买，之前有这次卖掉了 */
             notHold = Math.max(notHold, hold + prices[i]);
-            /**持有股票：之前有，之前没有但是现在买了 */
+            /**持有股票：之前有这次不卖，之前没有这次买 */
             hold = Math.max(hold, - prices[i]);
         }
         return notHold;
