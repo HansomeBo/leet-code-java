@@ -2,9 +2,7 @@ package linkedlist;
 
 import model.ListNode;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class 删除链表当中的重复元素_无序 {

@@ -18,7 +18,6 @@ public class IntersectionOfTwoArraysII {
         HashMap<Integer, Integer> map1 = transArrayToMap(nums1);
         HashMap<Integer, Integer> map2 = transArrayToMap(nums2);
         List<Integer> list = new ArrayList<>();
-        int arrayIndex = 0;
         Set<Integer> set = map1.keySet();
         for (int index : set) {
             int count = min(map1.get(index), map2.get(index));

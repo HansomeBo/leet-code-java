@@ -1,7 +1,5 @@
 package array.滑动窗口;
 
-import java.util.Map;
-
 /**
  * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
  */

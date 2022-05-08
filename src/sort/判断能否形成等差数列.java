@@ -1,7 +1,5 @@
 package sort;
 
-import util.PrintUtil;
-
 import java.util.Arrays;
 
 public class 判断能否形成等差数列 {

@@ -1,7 +1,6 @@
 package array;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * https://leetcode-cn.com/problems/two-sum/

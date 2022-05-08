@@ -33,7 +33,7 @@ public class 分割等和子集 {
                 if (num > j) {
                     dp[i][j] = dp[i - 1][j];
                 } else {
-                    dp[i][j] = dp[i - 1][j - m] | dp[i - 1][j];
+                    dp[i][j] = dp[i - 1][j - num] | dp[i - 1][j];
                 }
             }
         }
