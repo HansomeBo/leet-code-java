@@ -1,7 +1,5 @@
 package dp.easy;
 
-import java.util.List;
-
 /**
  * https://leetcode.cn/problems/counting-bits/
  */
