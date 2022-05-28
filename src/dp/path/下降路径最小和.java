@@ -1,4 +1,4 @@
-package dp;
+package dp.path;
 
 /**
  * https://leetcode-cn.com/problems/minimum-falling-path-sum/
