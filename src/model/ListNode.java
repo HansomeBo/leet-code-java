@@ -30,6 +30,16 @@ public class ListNode {
         return this.val + "->" + this.next.toString();
     }
 
+    public int getLength() {
+        ListNode tail = this;
+        int length = 0;
+        while (tail != null) {
+            tail = tail.next;
+            length++;
+        }
+        return length;
+    }
+
     public static ListNode getListNode(int[] arry) {
         if (arry == null) {
             return null;
