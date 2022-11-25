@@ -10,6 +10,17 @@ public class PrintUtil {
         System.out.println();
     }
 
+    public static void printIntArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("[");
+            for (int i1 = 0; i1 < array[i].length; i1++) {
+                System.out.print(array[i][i1]);
+                if (i1 != array[i].length - 1) System.out.print(",");
+            }
+            System.out.println("]");
+        }
+    }
+
     public static void printIntArray(int[][][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int i1 = 0; i1 < array[i].length; i1++) {

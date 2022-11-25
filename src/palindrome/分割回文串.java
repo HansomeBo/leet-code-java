@@ -8,7 +8,7 @@ import java.util.List;
  * https://leetcode.cn/problems/palindrome-partitioning/
  * abbbsss
  */
-public class PalindromePartitioning {
+public class 分割回文串 {
 
     private List<List<String>> result = new ArrayList<>();
     private LinkedList<String> palindromeList = new LinkedList<>();
@@ -53,6 +53,6 @@ public class PalindromePartitioning {
     }
 
     public static void main(String[] args) {
-        System.out.println(new PalindromePartitioning().partition("abb"));
+        System.out.println(new 分割回文串().partition("abb"));
     }
 }

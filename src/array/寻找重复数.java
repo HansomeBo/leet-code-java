@@ -2,6 +2,7 @@ package array;
 
 /**
  * https://leetcode.cn/problems/find-the-duplicate-number/
+ * TODO 这个二进制的方法也能解，不理解～
  */
 public class 寻找重复数 {
 
@@ -25,6 +26,7 @@ public class 寻找重复数 {
             fast = nums[fast];
             slow = nums[slow];
         }
+        /*快慢指针相遇后，慢指针指回起点，快慢指针一起移动*/
         slow = 0;
         while (fast != slow){
             fast = nums[fast];
