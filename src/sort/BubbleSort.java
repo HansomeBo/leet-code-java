@@ -1,4 +1,4 @@
-package order;
+package sort;
 
 import util.PrintUtil;
 
@@ -21,6 +21,6 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        PrintUtil.printIntArray(bubbleSort(new int[]{3,4,5,1,2}));
+        PrintUtil.printArray(bubbleSort(new int[]{3,4,5,1,2}));
     }
 }

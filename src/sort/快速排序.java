@@ -1,4 +1,4 @@
-package order;
+package sort;
 
 import util.PrintUtil;
 
@@ -58,7 +58,7 @@ public class 快速排序 {
     public static void main(String[] args) {
         int[] nums = new int[]{4, 3, 8, 9, 1, 3, 6, 7, 4};
         new 快速排序().quickSort(nums);
-        PrintUtil.printIntArray(nums);
+        PrintUtil.printArray(nums);
     }
 
 }

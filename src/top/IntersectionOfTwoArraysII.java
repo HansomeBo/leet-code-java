@@ -11,7 +11,7 @@ import java.util.Set;
 public class IntersectionOfTwoArraysII {
 
     public static void main(String[] args) {
-        PrintUtil.printIntArray(intersect(new int[]{4, 5, 8}, new int[]{4, 6, 8, 10}));
+        PrintUtil.printArray(intersect(new int[]{4, 5, 8}, new int[]{4, 6, 8, 10}));
     }
 
     public static int[] intersect(int[] nums1, int[] nums2) {

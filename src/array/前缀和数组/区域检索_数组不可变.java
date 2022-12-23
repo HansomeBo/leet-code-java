@@ -23,7 +23,7 @@ public class 区域检索_数组不可变 {
 
     public static void main(String[] args) {
         NumArray(new int[]{-2,0,3,-5,2,-1});
-        PrintUtil.printIntArray(preSum);
+        PrintUtil.printArray(preSum);
         System.out.println(sumRange(0,2));
     }
 }

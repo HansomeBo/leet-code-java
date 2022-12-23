@@ -28,14 +28,14 @@ public class MergeSortedArray {
             }
         }
         nums1 = res;
-        PrintUtil.printIntArray(nums1);
+        PrintUtil.printArray(nums1);
     }
 
     public static void merge2(int[] nums1, int m, int[] nums2, int n) {
         for (int i = m - 1, j = n - 1; i >= 0 && j >= 0; ) {
             nums1[i + j] = nums1[i] < nums2[j] ? nums2[j --] : nums1[i --];
         }
-        PrintUtil.printIntArray(nums1);
+        PrintUtil.printArray(nums1);
     }
 
 }

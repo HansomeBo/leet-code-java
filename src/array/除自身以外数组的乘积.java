@@ -2,8 +2,6 @@ package array;
 
 import util.PrintUtil;
 
-import java.util.Arrays;
-
 /**
  * https://leetcode.cn/problems/product-of-array-except-self/
  */
@@ -55,7 +53,7 @@ public class 除自身以外数组的乘积 {
     }
 
     public static void main(String[] args) {
-        PrintUtil.printIntArray(new 除自身以外数组的乘积().productExceptSelfII(new int[]{3,2,3,0,4}));
+        PrintUtil.printArray(new 除自身以外数组的乘积().productExceptSelfII(new int[]{3,2,3,0,4}));
     }
 
 

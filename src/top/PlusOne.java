@@ -6,7 +6,7 @@ import util.PrintUtil;
 public class PlusOne {
 
     public static void main(String[] args) {
-        PrintUtil.printIntArray(plusOne(new int[]{8,9,9}));
+        PrintUtil.printArray(plusOne(new int[]{8,9,9}));
     }
 
     public static int[] plusOne(int[] digits) {

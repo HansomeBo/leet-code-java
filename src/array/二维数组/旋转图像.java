@@ -29,14 +29,14 @@ public class 旋转图像 {
                 swap(matrix, i, j, i, width - 1 - j);
             }
         }
-        PrintUtil.printIntArray(matrix);
+        PrintUtil.printArray(matrix);
         /*右上到左下的对接线交换，higth和width互换*/
         for (int i = 0; i < hight; i++) {
             for (int j = 0; j < width - i; j++) {
                 swap(matrix, i, j, hight - 1 - j, width - 1 - i);
             }
         }
-        PrintUtil.printIntArray(matrix);
+        PrintUtil.printArray(matrix);
     }
 
     public static void swap(int[][] matrix, int l1, int r1, int l2, int r2) {

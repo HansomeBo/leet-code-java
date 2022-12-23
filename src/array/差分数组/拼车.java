@@ -15,7 +15,7 @@ public class 拼车 {
             diff[trips[i][1]] += trips[i][0];
             diff[trips[i][2]] -= trips[i][0];
         }
-        PrintUtil.printIntArray(diff);
+        PrintUtil.printArray(diff);
         int[] nums = new int[20];
         nums[0] = diff[0];
         if (nums[0] > capacity) return false;
@@ -23,7 +23,7 @@ public class 拼车 {
             nums[i] = nums[i - 1] + diff[i];
             if(nums[i] > capacity) return false;
         }
-        PrintUtil.printIntArray(nums);
+        PrintUtil.printArray(nums);
         return true;
     }
 

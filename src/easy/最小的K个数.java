@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
 public class 最小的K个数 {
 
     public static void main(String[] args) {
-        PrintUtil.printIntArray(getLeastNumbers(new int[]{0,0,0,2,0,5}, 0));
+        PrintUtil.printArray(getLeastNumbers(new int[]{0,0,0,2,0,5}, 0));
     }
     public static int[] getLeastNumbers(int[] arr, int k) {
         if (k <= 0){

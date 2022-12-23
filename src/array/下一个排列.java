@@ -57,7 +57,7 @@ public class 下一个排列 {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, 2};
         nextPermutation(nums);
-        PrintUtil.printIntArray(nums);
+        PrintUtil.printArray(nums);
     }
 
 }

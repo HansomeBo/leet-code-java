@@ -65,7 +65,7 @@ public class 课程表 {
                 list.add(prerequisite[0]);
                 map.put(prerequisite[1], list);
             }
-            PrintUtil.printIntArray(count);
+            PrintUtil.printArray(count);
             System.out.println(map);
             Queue<Integer> queue = new LinkedList<>();/*入度为零的节点*/
             for (int i = 0; i < count.length; i++) {

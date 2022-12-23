@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class 从尾到头打印链表 {
 
     public static void main(String[] args) {
-        PrintUtil.printIntArray(reversePrint(new ListNode(1,2,43,4,65,6)));
+        PrintUtil.printArray(reversePrint(new ListNode(1,2,43,4,65,6)));
 
     }
 

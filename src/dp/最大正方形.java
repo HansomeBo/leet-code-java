@@ -42,7 +42,7 @@ public class 最大正方形 {
                 maxLength = Math.max(dp[i][j], maxLength);
             }
         }
-        PrintUtil.printIntArray(dp);
+        PrintUtil.printArray(dp);
         return maxLength * maxLength;
     }
 }
